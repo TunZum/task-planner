@@ -1,0 +1,216 @@
+/* Дополнительные стили для нового дизайна */
+
+/* Навигационное меню */
+.navbar {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Карточки статистики */
+.stat-card {
+    border-radius: 12px;
+    padding: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+    min-height: 120px;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.bg-gradient-blue {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+}
+
+.bg-gradient-green {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.bg-gradient-purple {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+}
+
+.bg-gradient-orange {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+    margin-right: 20px;
+    opacity: 0.9;
+}
+
+.stat-content {
+    flex-grow: 1;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-bottom: 5px;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Карточка добавления задачи */
+.add-task-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.add-task-card .card-header {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Кнопки фильтров */
+.filter-buttons .btn {
+    border-radius: 25px;
+    padding: 8px 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-width: 2px;
+}
+
+.filter-buttons .btn.active {
+    background: #3b82f6;
+    color: white;
+    border-color: #3b82f6;
+}
+
+/* Поиск */
+.input-group-text {
+    background: #1e293b;
+    border-color: #334155;
+    color: #94a3b8;
+}
+
+#searchInput {
+    background: #1e293b;
+    border-color: #334155;
+    color: #e2e8f0;
+}
+
+#searchInput:focus {
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+/* Пустое состояние */
+.empty-state-icon {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
+
+/* Быстрые действия */
+.card.bg-light {
+    background: rgba(30, 41, 59, 0.5) !important;
+    border-color: #334155;
+}
+
+.card.bg-light .card-header {
+    background: rgba(30, 41, 59, 0.8) !important;
+    border-bottom: 1px solid #334155;
+    color: #e2e8f0;
+}
+
+/* Футер */
+footer {
+    border-top: 1px solid #1e293b;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .stat-card {
+        min-height: 100px;
+        padding: 15px;
+    }
+    
+    .stat-icon {
+        font-size: 2rem;
+        margin-right: 15px;
+    }
+    
+    .stat-value {
+        font-size: 1.5rem;
+    }
+    
+    .filter-buttons {
+        text-align: center;
+    }
+    
+    .filter-buttons .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Плавные переходы */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Стили для тегов */
+.tag {
+    display: inline-block;
+    background: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
+    padding: 3px 10px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    background: rgba(59, 130, 246, 0.2);
+    transform: translateY(-1px);
+}
+
+/* Приоритеты */
+.priority-high { background-color: #ef4444; }
+.priority-medium { background-color: #f59e0b; }
+.priority-low { background-color: #10b981; }
+
+.task-priority {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+/* Уведомления */
+.alert.position-fixed {
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
