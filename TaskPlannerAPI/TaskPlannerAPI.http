@@ -1,0 +1,6 @@
+@TaskPlannerAPI_HostAddress = http://localhost:5023
+
+GET {{TaskPlannerAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
